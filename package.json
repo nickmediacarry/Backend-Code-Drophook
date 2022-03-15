@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.17.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "drophook-backend",
+  "version": "1.0.0",
+  "description": "vendor management backend work",
+  "main": "server.js",
+  "keywords": [
+    "nodejs",
+    "expressjs"
+  ],
+  "author": "priya",
+  "license": "ISC"
+}
