@@ -71,6 +71,30 @@ exports.create = (req, res) => {
       });
   };
 
+  // update vendor
+  exports.update = (req, res) => {
+    const id = req.params.id;
+    VendorRequest.update(req.body, {
+      where: { id: id }
+    })
+      .then(num => {
+        if (num == 1) {
+          res.send({
+            message: "vendor was updated successfully."
+          });
+        } else {
+          res.send({
+            message: `Cannot update vendor with id=${id}. Maybe vendor was not found or req.body is empty!`
+          });
+        }
+      })
+      .catch(err => {
+        res.status(500).send({
+          message: "Error updating vendor with id=" + id
+        });
+      });
+  };
+
   // delete all vendor after approval
   exports.delete = (req, res) => {
     const id = req.params.id;
